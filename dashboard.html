@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MediAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MediAI</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Patient Dashboard Section -->
+    <section class="patient-dashboard">
+        <div class="container">
+            <h2 class="section-title">Patient Dashboard</h2>
+            <div class="dashboard-grid">
+                <!-- Patient List -->
+                <div class="dashboard-card patient-list">
+                    <h3>Patient List</h3>
+                    <div class="patient-item">
+                        <div class="patient-info">
+                            <p class="patient-name">John Anderson</p>
+                            <p class="patient-age">Age: 45</p>
+                        </div>
+                        <p class="last-visit">Last visit: Jan 15, 2024</p>
+                    </div>
+                    <div class="patient-item">
+                        <div class="patient-info">
+                            <p class="patient-name">Sarah Mitchell</p>
+                            <p class="patient-age">Age: 32</p>
+                        </div>
+                        <p class="last-visit">Last visit: Jan 12, 2024</p>
+                    </div>
+                    <div class="patient-item">
+                        <div class="patient-info">
+                            <p class="patient-name">Robert Chen</p>
+                            <p class="patient-age">Age: 58</p>
+                        </div>
+                        <p class="last-visit">Last visit: Jan 10, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Visit History -->
+                <div class="dashboard-card visit-history">
+                    <h3>Visit History & Records</h3>
+                    <div class="visit-item">
+                        <p class="visit-date">Jan 15, 2024</p>
+                        <p class="visit-type">Routine Checkup</p>
+                        <p class="visit-status">✓ Notes Generated</p>
+                    </div>
+                    <div class="visit-item">
+                        <p class="visit-date">Dec 28, 2023</p>
+                        <p class="visit-type">Follow-up Consultation</p>
+                        <p class="visit-status">✓ Notes Generated</p>
+                    </div>
+                    <div class="visit-item">
+                        <p class="visit-date">Dec 10, 2023</p>
+                        <p class="visit-type">Initial Consultation</p>
+                        <p class="visit-status">✓ Notes Generated</p>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for records...">
+                    </div>
+                </div>
+
+                <!-- Previous Reports -->
+                <div class="dashboard-card previous-reports">
+                    <h3>Previous Reports</h3>
+                    <div class="report-item">
+                        <p class="report-name">Lab Results - Routine Checkup</p>
+                        <p class="report-date">Jan 15, 2024</p>
+                        <button class="btn-small">View</button>
+                    </div>
+                    <div class="report-item">
+                        <p class="report-name">Diagnosis Summary</p>
+                        <p class="report-date">Dec 28, 2023</p>
+                        <button class="btn-small">View</button>
+                    </div>
+                    <div class="report-item">
+                        <p class="report-name">Treatment Plan</p>
+                        <p class="report-date">Dec 10, 2023</p>
+                        <button class="btn-small">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Analytics Section -->
+    <section class="health-analytics">
+        <div class="container">
+            <h2 class="section-title">Health Analytics & Progress</h2>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>Patient Health Progress Timeline</h3>
+                    <div class="chart-container">
+                        <canvas id="healthChart"></canvas>
+                    </div>
+                    <p class="chart-description">Patient health metrics tracked across visits</p>
+                </div>
+                <div class="analytics-card">
+                    <h3>Vital Signs History</h3>
+                    <div class="vitals-list">
+                        <div class="vital-item">
+                            <p class="vital-label">Blood Pressure</p>
+                            <p class="vital-value">120/80 mmHg</p>
+                            <p class="vital-date">Jan 15, 2024</p>
+                        </div>
+                        <div class="vital-item">
+                            <p class="vital-label">Heart Rate</p>
+                            <p class="vital-value">72 bpm</p>
+                            <p class="vital-date">Jan 15, 2024</p>
+                        </div>
+                        <div class="vital-item">
+                            <p class="vital-label">BMI</p>
+                            <p class="vital-value">22.5</p>
+                            <p class="vital-date">Jan 15, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>MediAI</h4>
+                    <p>An intelligent AI medical assistant platform that transforms how doctors document patient consultations and manage clinical records.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Team</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@mediai.com">hello@mediai.com</a></li>
+                        <li><a href="tel:+1-800-MEDIAI">+1-800-MEDIAI</a></li>
+                        <li><a href="#">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

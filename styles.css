@@ -1,0 +1,1045 @@
+﻿/* ==========================================
+   Global Styles & Variables
+   ========================================== */
+
+:root {
+    --primary-blue: #0066cc;
+    --secondary-blue: #003d99;
+    --light-blue: #e6f0ff;
+    --lighter-blue: #f0f7ff;
+    --white: #ffffff;
+    --gray-light: #f5f5f5;
+    --gray-medium: #888888;
+    --gray-dark: #333333;
+    --border-color: #e0e0e0;
+    --success-green: #4caf50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--white);
+    color: var(--gray-dark);
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--gray-dark);
+}
+
+/* ==========================================
+   Button Styles
+   ========================================== */
+
+.btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+
+nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--lighter-blue) 0%, var(--white) 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.hero-headline {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--gray-dark);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-subheadline {
+    font-size: 1.125rem;
+    color: var(--gray-medium);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   Problem Section
+   ========================================== */
+
+.problem {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.problem-card {
+    background-color: var(--gray-light);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-blue);
+    transition: all 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+}
+
+.problem-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.problem-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
+.problem-card p {
+    color: var(--gray-medium);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   Solution Section
+   ========================================== */
+
+.solution {
+    padding: 80px 0;
+    background-color: var(--lighter-blue);
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.solution-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.08);
+    transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+    transform: translateY(-5px);
+}
+
+.solution-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.solution-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
+.solution-card p {
+    color: var(--gray-medium);
+}
+
+/* ==========================================
+   Workflow Section
+   ========================================== */
+
+.workflow {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step-label {
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-dark);
+    width: 100px;
+}
+
+.arrow {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ==========================================
+   Demo Section
+   ========================================== */
+
+.demo {
+    padding: 80px 0;
+    background-color: var(--lighter-blue);
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.demo-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+}
+
+.demo-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: var(--gray-dark);
+}
+
+.mic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mic-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.mic-button:hover {
+    background-color: var(--secondary-blue);
+    transform: scale(1.05);
+}
+
+.mic-button.recording {
+    background-color: #d32f2f;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(211, 47, 47, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    }
+}
+
+.mic-icon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.mic-text {
+    font-size: 0.875rem;
+}
+
+.recording-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-family: 'Courier New', monospace;
+}
+
+.recording-status {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    color: var(--primary-blue);
+    text-align: center;
+    font-weight: 600;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recording-indicator {
+    width: 100%;
+    min-height: 20px;
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.recording-indicator.active {
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+.recording-indicator.active::before {
+    content: "\2022";
+    margin-right: 6px;
+    animation: pulse 1.2s infinite;
+}
+
+.recording-meta {
+    margin-top: 12px;
+    color: var(--gray-medium);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.recording-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.recording-action-btn {
+    border: 1px solid var(--border-color);
+    background: var(--white);
+    color: var(--gray-dark);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.recording-action-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.recording-action-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.recording-action-btn.pause-active {
+    border-color: #d32f2f;
+    color: #d32f2f;
+}
+
+.recording-action-btn.restart {
+    color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+}
+
+.transcription-box,
+.notes-box {
+    background-color: var(--gray-light);
+    padding: 25px;
+    border-radius: 8px;
+    min-height: 200px;
+    border: 2px solid var(--border-color);
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.placeholder-text {
+    color: var(--gray-medium);
+    font-style: italic;
+}
+
+/* ==========================================
+   Patient Dashboard Section
+   ========================================== */
+
+.patient-dashboard {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.dashboard-card {
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.1);
+}
+
+.dashboard-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--gray-dark);
+    border-bottom: 3px solid var(--primary-blue);
+    padding-bottom: 15px;
+}
+
+.patient-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.patient-item:last-child {
+    border-bottom: none;
+}
+
+.patient-info {
+    margin-bottom: 8px;
+}
+
+.patient-name {
+    font-weight: 700;
+    color: var(--gray-dark);
+    margin-bottom: 5px;
+}
+
+.patient-age {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+}
+
+.last-visit {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+}
+
+.visit-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.visit-item:last-child {
+    border-bottom: none;
+}
+
+.visit-date {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.visit-type {
+    color: var(--gray-dark);
+    margin-bottom: 5px;
+}
+
+.visit-status {
+    font-size: 0.9rem;
+    color: var(--success-green);
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.report-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-item:last-child {
+    border-bottom: none;
+}
+
+.report-name {
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 5px;
+}
+
+.report-date {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   Health Analytics Section
+   ========================================== */
+
+.health-analytics {
+    padding: 80px 0;
+    background-color: var(--lighter-blue);
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.analytics-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+}
+
+.analytics-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: var(--gray-dark);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.chart-description {
+    text-align: center;
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+}
+
+.vitals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vital-item {
+    padding: 20px;
+    background-color: var(--gray-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.vital-label {
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 8px;
+}
+
+.vital-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.vital-date {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+}
+
+/* ==========================================
+   AI Features Section
+   ========================================== */
+
+.ai-features {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, var(--lighter-blue), var(--white));
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid var(--light-blue);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
+.feature-card p {
+    color: var(--gray-medium);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   Benefits Section
+   ========================================== */
+
+.benefits {
+    padding: 80px 0;
+    background-color: var(--lighter-blue);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit-item {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.08);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
+.benefit-item p {
+    color: var(--gray-medium);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.footer {
+    background-color: var(--gray-dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.75rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .problem,
+    .solution,
+    .workflow,
+    .demo,
+    .patient-dashboard,
+    .health-analytics,
+    .ai-features,
+    .benefits {
+        padding: 60px 0;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .workflow-steps {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .demo-grid,
+    .problem-grid,
+    .solution-grid,
+    .analytics-grid,
+    .features-grid,
+    .benefits-grid,
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-label {
+        width: auto;
+    }
+
+    .report-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-small {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-name {
+        font-size: 2rem;
+    }
+
+    .hero-headline {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .problem,
+    .solution,
+    .workflow,
+    .demo,
+    .patient-dashboard,
+    .health-analytics,
+    .ai-features,
+    .benefits {
+        padding: 40px 0;
+    }
+
+    .problem-card,
+    .solution-card,
+    .dashboard-card,
+    .analytics-card,
+    .feature-card,
+    .benefit-item,
+    .demo-card {
+        padding: 25px 20px;
+    }
+
+    .footer-grid {
+        gap: 25px;
+    }
+
+    .problem-grid,
+    .solution-grid,
+    .features-grid,
+    .benefits-grid,
+    .dashboard-grid,
+    .analytics-grid,
+    .demo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+

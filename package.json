@@ -1,0 +1,15 @@
+{
+  "name": "medical-site",
+  "version": "1.0.0",
+  "description": "A medical website",
+  "main": "index.html",
+  "scripts": {
+    "dv": "http-server -p 3000"
+  },
+  "keywords": ["medical", "website"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

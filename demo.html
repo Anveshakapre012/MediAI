@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - MediAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MediAI</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Workflow Visualization -->
+    <section class="workflow" id="workflow">
+        <div class="container">
+            <h2 class="section-title">The MediAI Workflow</h2>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <p class="step-label">Doctor Records</p>
+                </div>
+                <div class="arrow">â†’</div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <p class="step-label">AI Transcription</p>
+                </div>
+                <div class="arrow">â†’</div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <p class="step-label">AI Generates Notes</p>
+                </div>
+                <div class="arrow">â†’</div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <p class="step-label">Record Saved</p>
+                </div>
+                <div class="arrow">â†’</div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <p class="step-label">Doctor Accesses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Try MediAI Live Demo</h2>
+            <div class="demo-grid">
+                <!-- Microphone Recording Interface -->
+                <div class="demo-card recording-interface">
+                    <h3>Recording Interface</h3>
+                    <div class="mic-container">
+                        <button class="mic-button" id="recordBtn" onclick="toggleRecording()">
+                            <span class="mic-icon">&#127908;</span>
+                            <span class="mic-text">Start Recording</span>
+                        </button>
+                        <p class="recording-time" id="recordingTime">00:00</p>
+                        <p class="recording-indicator" id="recordingIndicator"></p>
+                        <div class="recording-actions">
+                            <button class="recording-action-btn" id="pauseBtn" onclick="pauseRecording()" disabled>Pause Recording</button>
+                            <button class="recording-action-btn restart" id="restartBtn" onclick="restartRecording()">Restart Recording</button>
+                        </div>
+                    </div>
+                    <div class="recording-status" id="recordingStatus"></div>
+                    <p class="recording-meta" id="recordingMetadata"></p>
+                </div>
+
+                <!-- Consultation Transcript -->
+                <div class="demo-card transcription-panel">
+                    <h3>Consultation Transcript</h3>
+                    <div class="transcription-box" id="transcriptionBox">
+                        <p class="placeholder-text">Transcription will appear here...</p>
+                    </div>
+                </div>
+
+                <!-- Generated Notes Preview -->
+                <div class="demo-card notes-preview">
+                    <h3>AI Summary + SOAP Preview</h3>
+                    <div class="notes-box" id="notesBox">
+                        <p class="placeholder-text">Clinical notes will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>MediAI</h4>
+                    <p>An intelligent AI medical assistant platform that transforms how doctors document patient consultations and manage clinical records.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Team</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@mediai.com">hello@mediai.com</a></li>
+                        <li><a href="tel:+1-800-MEDIAI">+1-800-MEDIAI</a></li>
+                        <li><a href="#">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
